@@ -1,8 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Saurabh Jadhav - Personal Portfolio
+
+This is a modern, minimal, and fully responsive personal portfolio website for Saurabh Jadhav, built with Next.js, TypeScript, Tailwind CSS, Shadcn/UI, Lucide icons, and Framer Motion for smooth animations and interactive effects.
+
+## Features
+
+- **Fullscreen Hero Section**: Engaging landing page with name, tagline, and call-to-action buttons.
+- **About Me**: Professional bio with an animated timeline of career journey.
+- **Skills**: Interactive animated grid showcasing both engineering and data/tech skills.
+- **Projects**: Animated cards for each project with expandable modals for detailed information and links.
+- **Experience & Education**: Timeline with smooth animations.
+- **Contact**: Form for inquiries and animated social media icons.
+- **Sticky Navigation**: Smooth scrolling navigation with a mobile slide-in menu.
+- **Responsive Design**: Optimized for various screen sizes (desktop, tablet, mobile).
+- **Dark Theme**: A sleek and modern dark color scheme.
+- **SEO Optimized**: Basic metadata for search engine visibility.
+- **Accessibility Friendly**: Built with accessibility best practices in mind.
+
+## Technologies Used
+
+- **Next.js 14+**: React framework for production.
+- **TypeScript**: Type-safe JavaScript.
+- **Tailwind CSS**: Utility-first CSS framework for rapid styling.
+- **Shadcn/UI**: Reusable UI components built with Radix UI and Tailwind CSS.
+- **Lucide Icons**: Beautiful and customizable open-source icons.
+- **Framer Motion**: Production-ready motion library for React.
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to set up and run the project locally.
+
+### Prerequisites
+
+- Node.js (v18.x or later)
+- npm or yarn or pnpm
+
+### Installation
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/your-username/portfolio-saurabh-jadhav.git
+    cd portfolio-saurabh-jadhav
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    ```
+
+3.  **Add Shadcn/UI components (if not already added):**
+
+    This project uses several Shadcn/UI components. If you encounter any module not found errors related to `@/components/ui/*`, you might need to add them using the Shadcn CLI. Run the following command:
+
+    ```bash
+    npx shadcn@latest add button sheet card dialog badge aspect-ratio input textarea label
+    ```
+
+### Running the Development Server
+
+To start the development server:
 
 ```bash
 npm run dev
@@ -10,27 +71,48 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To build the application for production:
 
-## Learn More
+```bash
+npm run build
+# or
+yarn build
+# or
+pnpm build
+```
 
-To learn more about Next.js, take a look at the following resources:
+This will create an optimized production build in the `.next` folder.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Running the Production Build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To start the production server:
 
-## Deploy on Vercel
+```bash
+npm run start
+# or
+yarn start
+# or
+pnpm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Content**: All text content (name, tagline, bio, project details, etc.) can be easily updated in the respective component files (`components/sections/*.tsx`).
+- **Images**: Replace placeholder images in the `public/images` directory with your own project screenshots or personal photos.
+- **Styling**: Customize the look and feel using Tailwind CSS classes. The `tailwind.config.ts` file can be modified for theme adjustments.
+- **Animations**: Adjust Framer Motion properties in component files to fine-tune animations.
+
+## SEO & Accessibility
+
+- **SEO**: Basic SEO metadata is configured in `app/layout.tsx`. You can expand on this with more specific meta tags for better search engine ranking.
+- **Accessibility**: Components are built with accessibility in mind, following best practices for semantic HTML and keyboard navigation.
+
+## License
+
+This project is open source and available under the MIT License.
