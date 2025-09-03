@@ -1,10 +1,21 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion } from 'motion/react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 
 export default function Hero() {
+  const [isAnimating, setIsAnimating] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsAnimating(false);
+    }, 5000); // Stop animation after 5 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section id="hero" className="w-full h-screen flex items-center justify-center text-center">
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 px-4 md:px-8">
@@ -57,36 +68,33 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="relative w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden"
+          className="relative w-64 h-64 md:w-96 md:h-96 rounded-full"
+          style={{
+            padding: '4px', 
+            overflow: 'hidden',
+            background: 'transparent',
+          }}
+          onHoverStart={() => setIsAnimating(true)}
+          onHoverEnd={() => setIsAnimating(false)}
         >
-          <Image
-            src="/images/profile.png"
-            alt="Saurabh Jadhav Profile"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-full"
-          />
           <motion.div
-            className="absolute inset-0 rounded-full"
-            animate={{
-              boxShadow: [
-                '0 0 0px 0px rgba(255, 215, 0, 0.7)',
-                '0 0 15px 5px rgba(255, 215, 0, 0.7)',
-                '0 0 0px 0px rgba(255, 215, 0, 0.7)',
-              ],
-              borderColor: [
-                'rgba(255, 215, 0, 0.7)',
-                'rgba(139, 69, 19, 0.7)',
-                'rgba(255, 215, 0, 0.7)',
-              ],
+            className="absolute inset-0"
+            style={{
+              borderRadius: '50%',
+              background: 'conic-gradient(from 180deg at 50% 50%, #ffdc80, #fcaf45, #f77737, #f56040, #fd1d1d, #e1306c, #c13584, #833ab4, #5851db, #405de6, transparent)',
             }}
-            transition={{
-              duration: 4,
-              ease: "easeInOut",
-              repeat: Infinity,
-              repeatType: "loop",
-            }}
+            animate={isAnimating ? { rotate: 360 } : { rotate: 0 }}
+            transition={isAnimating ? { duration: 5, ease: "linear", repeat: Infinity } : { duration: 0.5, ease: "linear" }}
           />
+          <div className="relative w-full h-full bg-background rounded-full overflow-hidden">
+            <Image
+              src="/images/profile.png"
+              alt="Saurabh Jadhav Profile"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-full"
+            />
+          </div>
         </motion.div>
       </div>
     </section>
