@@ -31,15 +31,15 @@ export default function Contact() {
           >
             <form className="space-y-4">
               <div>
-                <Label htmlFor="name">Name</Label>
+                <Label htmlFor="name" className="mb-2">Name</Label>
                 <Input id="name" type="text" placeholder="Your Name" />
               </div>
               <div>
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email" className="mb-2">Email</Label>
                 <Input id="email" type="email" placeholder="your@example.com" />
               </div>
               <div>
-                <Label htmlFor="message">Message</Label>
+                <Label htmlFor="message" className="mb-2">Message</Label>
                 <Textarea id="message" placeholder="Your message..." rows={5} />
               </div>
               <Button type="submit" className="w-full">Send Message</Button>

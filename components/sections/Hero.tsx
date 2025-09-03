@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import AnimatedVerse from '@/components/shared/AnimatedVerse';
 
 export default function Hero() {
   const [isAnimating, setIsAnimating] = useState(true);
@@ -30,8 +31,17 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-4xl md:text-6xl font-bold tracking-tighter mb-4"
+            style={{ color: "white" }}
           >
-            Saurabh Jadhav
+            {"Saurabh Jadhav".split("").map((char, index) => (
+              <motion.span
+                key={index}
+                whileHover={{ color: "#ffdc80" }}
+                className="hover:gradient-text"
+              >
+                {char}
+              </motion.span>
+            ))}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -54,15 +64,7 @@ export default function Hero() {
               <a href="#contact">Contact Me</a>
             </Button>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-            className="mt-8 text-sm text-muted-foreground"
-          >
-            <p>"Talk is cheap. Show me the code." - Linus Torvalds</p>
-            <p>"Any fool can write code that a computer can understand. Good programmers write code that humans can understand." - Martin Fowler</p>
-          </motion.div>
+          <AnimatedVerse />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}

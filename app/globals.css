@@ -120,3 +120,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-effect-2 {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.highlight {
+  color: #ffdc80;
+  text-shadow: 0 0 10px #ffdc80, 0 0 20px #ffdc80;
+}
+
+.hover\:gradient-text:hover {
+  background: linear-gradient(45deg, #ffdc80, #fcaf45, #f77737, #f56040, #fd1d1d, #e1306c, #c13584, #833ab4, #5851db, #405de6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
