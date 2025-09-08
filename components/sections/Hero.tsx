@@ -19,7 +19,7 @@ export default function Hero() {
 
   return (
     <section id="hero" className="w-full h-screen flex items-center justify-center text-center">
-      <div className="flex flex-col md:flex-row items-center justify-center gap-8 px-4 md:px-8">
+      <div className="w-full flex flex-col md:flex-row items-center justify-evenly gap-8 px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}

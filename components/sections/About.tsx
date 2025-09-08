@@ -5,12 +5,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const timelineEvents = [
   {
-    date: '2018',
+    date: '2009',
     title: 'Mechanical Engineering Diploma',
     description: 'Graduated with a diploma in Mechanical Engineering, laying the foundation for a career in the industrial sector.',
   },
   {
-    date: '2018 - Present',
+    date: '2011 - Present',
     title: 'Planner, CSP Mill - Tunnel Furnace Dept.',
     description: 'Managing and optimizing production processes in a dynamic steel mill environment. Also serving as an Internal Auditor for ISO 9001, 45001, and 14001.',
   },

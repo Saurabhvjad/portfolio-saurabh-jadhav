@@ -31,7 +31,7 @@ const projects: Project[] = [
   {
     title: 'AI-Powered Coil Defect Detection',
     description: 'Developed an AI-based system using YOLOv8 and Roboflow for real-time defect detection in steel coils.',
-    image: '/images/project-placeholder.svg', // Placeholder image
+    image: '/images/Coil Defect identification.png',
     technologies: ['Python', 'YOLOv8', 'Roboflow', 'Machine Learning'],
     github: '#',
     live: '#',
@@ -41,7 +41,7 @@ const projects: Project[] = [
   {
     title: 'Predictive Models for CSP Mill Stability',
     description: 'Built predictive models to forecast and optimize process stability in a Continuous Slab Production (CSP) Mill.',
-    image: '/images/project-placeholder.svg', // Placeholder image
+    image: '/images/csp stability.png',
     technologies: ['Python', 'Data Science', 'Machine Learning', 'Statistics'],
     github: '#',
     live: '#',
@@ -51,7 +51,7 @@ const projects: Project[] = [
   {
     title: 'SAP Task Automation with Python',
     description: 'Automated repetitive SAP tasks using Python scripting, significantly improving operational efficiency.',
-    image: '/images/project-placeholder.svg', // Placeholder image
+    image: '/images/SAP automation.png',
     technologies: ['Python', 'SAP', 'Automation'],
     github: '#',
     live: '#',
@@ -61,7 +61,7 @@ const projects: Project[] = [
   {
     title: 'Power BI Dashboards for Operational Insights',
     description: 'Created interactive Power BI dashboards to visualize key operational metrics and facilitate data-driven decision-making.',
-    image: '/images/project-placeholder.svg', // Placeholder image
+    image: '/images/power BI.png',
     technologies: ['Power BI', 'Data Visualization', 'Business Intelligence'],
     github: '#',
     live: '#',
@@ -71,7 +71,7 @@ const projects: Project[] = [
   {
     title: 'Procurement & Database Apps with Appwrite',
     description: 'Developed robust procurement and database applications using Appwrite for backend services.',
-    image: '/images/project-placeholder.svg', // Placeholder image
+    image: '/images/Planning.png',
     technologies: ['Appwrite', 'Next.js', 'Database Management'],
     github: '#',
     live: '#',
@@ -112,7 +112,7 @@ export default function Projects() {
                           src={project.image}
                           alt={project.title}
                           fill
-                          className="rounded-md object-cover"
+                          className="rounded-md object-contain"
                         />
                       </AspectRatio>
                     </CardHeader>
@@ -141,7 +141,7 @@ export default function Projects() {
                         src={project.image}
                         alt={project.title}
                         fill
-                        className="rounded-md object-cover"
+                        className="rounded-md object-contain"
                       />
                     </AspectRatio>
                     <p className="text-sm text-muted-foreground">{project.details}</p>
